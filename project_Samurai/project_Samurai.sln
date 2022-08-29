@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_Samurai", "project_Samurai\project_Samurai.csproj", "{C6E8BDDA-8AE0-4E93-93F1-A7D0F1749C2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6E8BDDA-8AE0-4E93-93F1-A7D0F1749C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E8BDDA-8AE0-4E93-93F1-A7D0F1749C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E8BDDA-8AE0-4E93-93F1-A7D0F1749C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E8BDDA-8AE0-4E93-93F1-A7D0F1749C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {660E53B4-AFD6-411A-9C31-C1D09CD86264}
+	EndGlobalSection
+EndGlobal
