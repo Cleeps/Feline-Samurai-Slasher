@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "nTvuHVIHr5NFpac7P/SdZH/BarvZzFJG9NT8fkKAd2nM7OKjGlPlhB7fQhd0trFlXqeBwcxjBONjPFuh5FV4uA==",
+  "dgSpecHash": "VlGFEg7UE23B4JpjawXeP60ACrINk1N5Senh9erbeuq7whZcUgb5qBAfM/IJ+FVvrjLHYAK2ZTJuXL60wNNBrQ==",
   "success": true,
-  "projectFilePath": "D:\\Visual Studio 2019\\Projects\\repos\\project_Samurai\\project_Samurai\\project_Samurai.csproj",
+  "projectFilePath": "C:\\Users\\nerdy\\source\\repos\\Feline-Samurai-Slasher\\project_Samurai\\project_Samurai\\project_Samurai.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nerdy\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\nerdy\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\nerdy\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+    "C:\\Users\\nerdy\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
   ],
   "logs": []
 }

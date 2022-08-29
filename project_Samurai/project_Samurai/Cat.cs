@@ -23,14 +23,16 @@ namespace project_Samurai
         private playerStates prevPlayerState;
         private int counterTimer;
         private int dashTimer;
+        private Vector2 movement;
         private KeyboardState currentKeyboardState;
         private KeyboardState previousKeyboardState;
 
         // Constructor
-        public Cat(Texture2D text, Vector2 pos)
+        public Cat(Texture2D text, Vector2 pos, Rectangle box)
         {
             texture = text;
             position = pos;
+            boundingBox = box;
         }
 
         // Update method
@@ -62,9 +64,12 @@ namespace project_Samurai
 
                         for (int i = 0; i < enemyList.Length; i++)
                         {
-                            if (CheckCollision(this, enemyList[i]))
+                            if (enemyList[i] != null)
                             {
-                                playerState = playerStates.dash;
+                                if (CheckCollision(this, enemyList[i]))
+                                {
+                                    playerState = playerStates.dash;
+                                }
                             }
                         }
                     }
@@ -81,10 +86,11 @@ namespace project_Samurai
 
                     if (dashTimer < 5)
                     {
-                        this.position.X += 20;
+                        this.movement.X = 20;
                     }
                     else
                     {
+                        movement.X = 0;
                         dashTimer = 0;
                         playerState = prevPlayerState;
                     }
@@ -94,6 +100,10 @@ namespace project_Samurai
                     break;
 
             }
+
+            position += movement;
+            boundingBox.X = (int)position.X;
+            boundingBox.Y = (int)position.Y;
 
             previousKeyboardState = Keyboard.GetState();
         }

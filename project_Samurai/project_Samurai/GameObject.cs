@@ -11,11 +11,17 @@ namespace project_Samurai
     {
         protected Texture2D texture;
         protected Vector2 position;
+        protected Rectangle boundingBox;
 
         // Check Collision method
         public bool CheckCollision(GameObject objectOne, GameObject objectTwo)
         {
-            return true;
+            if (objectOne.boundingBox.Intersects(objectTwo.boundingBox))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

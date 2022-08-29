@@ -31,10 +31,11 @@ namespace project_Samurai
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             cat = Content.Load<Texture2D>("samurai");
 
-            felineSamurai = new Cat(cat, new Vector2(150, 200));
-            tempEnemy = new TempEnemy(cat, new Vector2(550, 200));
+            felineSamurai = new Cat(cat, new Vector2(150, 200), new Rectangle(150, 200, 32, 64));
+            tempEnemy = new TempEnemy(cat, new Vector2(550, 200), new Rectangle(550, 200, 32, 64));
 
-            //enemyList = new GameObject[4];
+            // Temp enemy list creation
+            enemyList = new GameObject[4];
 
         // TODO: use this.Content to load your game content here
     }
@@ -44,7 +45,8 @@ namespace project_Samurai
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            //enemyList[0] = tempEnemy;
+            // Temp enemy list addition
+            enemyList[0] = tempEnemy;
 
             felineSamurai.Update(enemyList);
             tempEnemy.Update();

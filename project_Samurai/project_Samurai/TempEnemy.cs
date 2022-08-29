@@ -9,16 +9,21 @@ namespace project_Samurai
 {
     class TempEnemy : GameObject
     {
+        private Vector2 movement;
+
         // Constructor
-        public TempEnemy(Texture2D text, Vector2 pos)
+        public TempEnemy(Texture2D text, Vector2 pos, Rectangle box)
         {
             texture = text;
             position = pos;
+            boundingBox = box;
         }
 
         public void Update()
         {
             position.X--;
+            boundingBox.X = (int)position.X;
+            boundingBox.Y = (int)position.Y;
         }
 
         public void Draw(SpriteBatch _spriteBatch)

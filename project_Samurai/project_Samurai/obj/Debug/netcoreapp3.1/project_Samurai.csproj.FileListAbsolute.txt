@@ -23,3 +23,28 @@ D:\Visual Studio 2019\Projects\repos\project_Samurai\project_Samurai\obj\Debug\n
 D:\Visual Studio 2019\Projects\repos\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.dll
 D:\Visual Studio 2019\Projects\repos\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.pdb
 D:\Visual Studio 2019\Projects\repos\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.genruntimeconfig.cache
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\Content\samurai.xnb
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.exe
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.deps.json
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.runtimeconfig.json
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.runtimeconfig.dev.json
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.dll
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.pdb
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.csproj.AssemblyReference.cache
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.AssemblyInfoInputs.cache
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.AssemblyInfo.cs
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.csproj.CoreCompileInputs.cache
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.csproj.CopyComplete
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.dll
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.pdb
+C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.genruntimeconfig.cache
