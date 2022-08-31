@@ -11,6 +11,9 @@ namespace project_Samurai
         private Texture2D cat;
         private Cat felineSamurai;
         private TempEnemy tempEnemy;
+        private TempEnemy tempEnemy2;
+
+        // Change this to the list?
         private GameObject[] enemyList;
 
         public Game1()
@@ -31,8 +34,10 @@ namespace project_Samurai
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             cat = Content.Load<Texture2D>("samurai");
 
+            // Temporary creation calls
             felineSamurai = new Cat(cat, new Vector2(150, 200), new Rectangle(150, 200, 32, 64));
             tempEnemy = new TempEnemy(cat, new Vector2(550, 200), new Rectangle(550, 200, 32, 64));
+            tempEnemy2 = new TempEnemy(cat, new Vector2(750, 200), new Rectangle(550, 200, 32, 64));
 
             // Temp enemy list creation
             enemyList = new GameObject[4];
@@ -47,9 +52,11 @@ namespace project_Samurai
 
             // Temp enemy list addition
             enemyList[0] = tempEnemy;
+            enemyList[1] = tempEnemy2;
 
-            felineSamurai.Update(enemyList);
             tempEnemy.Update();
+            tempEnemy2.Update();
+            felineSamurai.Update(enemyList);
 
             // TODO: Add your update logic here
 
@@ -63,6 +70,7 @@ namespace project_Samurai
             _spriteBatch.Begin();
             felineSamurai.Draw(_spriteBatch);
             tempEnemy.Draw(_spriteBatch);
+            tempEnemy2.Draw(_spriteBatch);
             _spriteBatch.End();
 
             base.Draw(gameTime);

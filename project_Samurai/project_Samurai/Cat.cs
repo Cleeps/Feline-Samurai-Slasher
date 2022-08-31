@@ -16,10 +16,23 @@ namespace project_Samurai
         dash
     }
 
+    enum directions
+    {
+        up,
+        down,
+        left,
+        right,
+        upLeft,
+        upRight,
+        downLeft,
+        downRight
+    }
+
     class Cat : GameObject
     {
         // Fields
         private playerStates playerState = playerStates.idleRight;
+        private directions currentDirection = directions.right;
         private playerStates prevPlayerState;
         private int counterTimer;
         private int dashTimer;
@@ -46,7 +59,30 @@ namespace project_Samurai
                 case playerStates.idleRight:
                 case playerStates.idleLeft:
 
-                    if (currentKeyboardState.IsKeyDown(Keys.LeftShift) && !previousKeyboardState.IsKeyDown(Keys.LeftShift))
+                    // Movement input
+                    if (currentKeyboardState.IsKeyDown(Keys.W))
+                    {
+                        if ()
+                        { 
+                        
+                        }
+                    }
+                    else if (currentKeyboardState.IsKeyDown(Keys.S))
+                    {
+
+                    }
+                    else if (currentKeyboardState.IsKeyDown(Keys.A))
+                    {
+
+                    }
+                    else if (currentKeyboardState.IsKeyDown(Keys.D))
+                    { 
+                    
+                    }
+
+
+
+                        if (currentKeyboardState.IsKeyDown(Keys.LeftShift) && !previousKeyboardState.IsKeyDown(Keys.LeftShift))
                     {
                         prevPlayerState = playerState;
                         playerState = playerStates.counter;
@@ -62,6 +98,7 @@ namespace project_Samurai
                     {
                         // If a collision is detected here, send into the dash state
 
+                        // Maybe switch for a helper method?
                         for (int i = 0; i < enemyList.Length; i++)
                         {
                             if (enemyList[i] != null)
@@ -72,6 +109,7 @@ namespace project_Samurai
                                 }
                             }
                         }
+                        //
                     }
                     else
                     {
@@ -87,6 +125,20 @@ namespace project_Samurai
                     if (dashTimer < 5)
                     {
                         this.movement.X = 20;
+
+                        // Maybe switch for a helper method?
+                        for (int i = 0; i < enemyList.Length; i++)
+                        {
+                            if (enemyList[i] != null)
+                            {
+                                if (CheckCollision(this, enemyList[i]))
+                                {
+                                    // Reset dash timer if a collision is dectected during movement
+                                    dashTimer = 0;
+                                }
+                            }
+                        }
+                        //
                     }
                     else
                     {
