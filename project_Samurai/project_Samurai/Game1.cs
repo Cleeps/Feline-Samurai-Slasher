@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace project_Samurai
 {
@@ -12,9 +13,10 @@ namespace project_Samurai
         private Cat felineSamurai;
         private TempEnemy tempEnemy;
         private TempEnemy tempEnemy2;
+        private TempEnemy tempEnemy3;
 
         // Change this to the list?
-        private GameObject[] enemyList;
+        private List<TempEnemy> enemyList;
 
         public Game1()
         {
@@ -25,7 +27,6 @@ namespace project_Samurai
 
         protected override void Initialize()
         {
-
             base.Initialize();
         }
 
@@ -37,28 +38,27 @@ namespace project_Samurai
             // Temporary creation calls
             felineSamurai = new Cat(cat, new Vector2(150, 200), new Rectangle(150, 200, 32, 64));
             tempEnemy = new TempEnemy(cat, new Vector2(550, 200), new Rectangle(550, 200, 32, 64));
-            tempEnemy2 = new TempEnemy(cat, new Vector2(750, 200), new Rectangle(550, 200, 32, 64));
+            tempEnemy2 = new TempEnemy(cat, new Vector2(680, 200), new Rectangle(680, 200, 32, 64));
+            tempEnemy3 = new TempEnemy(cat, new Vector2(710, 100), new Rectangle(780, 300, 32, 64));
 
             // Temp enemy list creation
-            enemyList = new GameObject[4];
+            enemyList = new List<TempEnemy>();
 
-        // TODO: use this.Content to load your game content here
-    }
+            // Temp enemy list addition
+            enemyList.Add(tempEnemy);
+            enemyList.Add(tempEnemy2);
+            enemyList.Add(tempEnemy3);
+        }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // Temp enemy list addition
-            enemyList[0] = tempEnemy;
-            enemyList[1] = tempEnemy2;
-
             tempEnemy.Update();
             tempEnemy2.Update();
+            tempEnemy3.Update();
             felineSamurai.Update(enemyList);
-
-            // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
@@ -68,9 +68,14 @@ namespace project_Samurai
             GraphicsDevice.Clear(Color.Black);
 
             _spriteBatch.Begin();
+
+            for (int i = 0; i < enemyList.Count; i++)
+            {
+                enemyList[i].Draw(_spriteBatch);
+            }
+
             felineSamurai.Draw(_spriteBatch);
-            tempEnemy.Draw(_spriteBatch);
-            tempEnemy2.Draw(_spriteBatch);
+
             _spriteBatch.End();
 
             base.Draw(gameTime);

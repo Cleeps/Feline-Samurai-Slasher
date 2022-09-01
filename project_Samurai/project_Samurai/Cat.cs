@@ -49,7 +49,7 @@ namespace project_Samurai
         }
 
         // Update method
-        public void Update(GameObject[] enemyList)
+        public void Update(List<TempEnemy> enemyList)
         {
             currentKeyboardState = Keyboard.GetState();
 
@@ -59,30 +59,9 @@ namespace project_Samurai
                 case playerStates.idleRight:
                 case playerStates.idleLeft:
 
-                    // Movement input
-                    if (currentKeyboardState.IsKeyDown(Keys.W))
-                    {
-                        if ()
-                        { 
-                        
-                        }
-                    }
-                    else if (currentKeyboardState.IsKeyDown(Keys.S))
-                    {
+                    CheckDirection();
 
-                    }
-                    else if (currentKeyboardState.IsKeyDown(Keys.A))
-                    {
-
-                    }
-                    else if (currentKeyboardState.IsKeyDown(Keys.D))
-                    { 
-                    
-                    }
-
-
-
-                        if (currentKeyboardState.IsKeyDown(Keys.LeftShift) && !previousKeyboardState.IsKeyDown(Keys.LeftShift))
+                    if (currentKeyboardState.IsKeyDown(Keys.LeftShift) && !previousKeyboardState.IsKeyDown(Keys.LeftShift))
                     {
                         prevPlayerState = playerState;
                         playerState = playerStates.counter;
@@ -99,12 +78,14 @@ namespace project_Samurai
                         // If a collision is detected here, send into the dash state
 
                         // Maybe switch for a helper method?
-                        for (int i = 0; i < enemyList.Length; i++)
+                        for (int i = 0; i < enemyList.Count; i++)
                         {
                             if (enemyList[i] != null)
                             {
                                 if (CheckCollision(this, enemyList[i]))
                                 {
+                                    enemyList.RemoveAt(i);
+                                    i -= 1;
                                     playerState = playerStates.dash;
                                 }
                             }
@@ -122,17 +103,61 @@ namespace project_Samurai
                 // Dash State
                 case playerStates.dash:
 
-                    if (dashTimer < 5)
+                    if (dashTimer < 15)
                     {
-                        this.movement.X = 20;
+                        switch (currentDirection)
+                        {
+                            case directions.up:
+                                this.movement.Y = -10;
+                                this.movement.X = 0;
+                                break;
+                            case directions.left:
+                                this.movement.X = -10;
+                                this.movement.Y = 0;
+                                break;
+                            case directions.right:
+                                this.movement.X = 10;
+                                this.movement.Y = 0;
+                                break;
+                            case directions.down:
+                                this.movement.Y = -10;
+                                this.movement.X = 0;
+                                break;
+
+                            case directions.upLeft:
+                                this.movement.X = -7.1f;
+                                this.movement.Y = -7.1f;
+                                break;
+
+                            case directions.upRight:
+                                this.movement.X = 7.1f;
+                                this.movement.Y = -7.1f;
+                                break;
+
+                            case directions.downLeft:
+                                this.movement.X = -7.1f;
+                                this.movement.Y = 7.1f;
+                                break;
+
+                            case directions.downRight:
+                                this.movement.X = 7.1f;
+                                this.movement.Y = 7.1f;
+                                break;
+                        }
 
                         // Maybe switch for a helper method?
-                        for (int i = 0; i < enemyList.Length; i++)
+                        for (int i = 0; i < enemyList.Count; i++)
                         {
                             if (enemyList[i] != null)
                             {
                                 if (CheckCollision(this, enemyList[i]))
                                 {
+                                    enemyList.RemoveAt(i);
+                                    i -= 1;
+
+                                    // Re-check the direction to account for any changes
+                                    CheckDirection();
+
                                     // Reset dash timer if a collision is dectected during movement
                                     dashTimer = 0;
                                 }
@@ -143,6 +168,7 @@ namespace project_Samurai
                     else
                     {
                         movement.X = 0;
+                        movement.Y = 0;
                         dashTimer = 0;
                         playerState = prevPlayerState;
                     }
@@ -166,11 +192,41 @@ namespace project_Samurai
             {
                 // Idle States
                 case playerStates.idleRight:
-                    _spriteBatch.Draw(texture, position, Color.White);
+                    /*_spriteBatch.Draw(texture, position, Color.White);
                     break;
 
                 case playerStates.idleLeft:
-                    _spriteBatch.Draw(texture, position, Color.White);
+                    _spriteBatch.Draw(texture, position, Color.White);*/
+
+                    switch (currentDirection)
+                    {
+                        case directions.up:
+                            _spriteBatch.Draw(texture, position, Color.Indigo);
+                            break;
+                        case directions.left:
+                            _spriteBatch.Draw(texture, position, Color.Green);
+                            break;
+                        case directions.right:
+                            _spriteBatch.Draw(texture, position, Color.White);
+                            break;
+                        case directions.down:
+                            _spriteBatch.Draw(texture, position, Color.Orange);
+                            break;
+
+                        case directions.upLeft:
+                            _spriteBatch.Draw(texture, position, Color.Blue);
+                            break;
+                        case directions.upRight:
+                            _spriteBatch.Draw(texture, position, Color.Violet);
+                            break;
+                        case directions.downLeft:
+                            _spriteBatch.Draw(texture, position, Color.Yellow);
+                            break;
+                        case directions.downRight:
+                            _spriteBatch.Draw(texture, position, Color.Red);
+                            break;
+                    }
+
                     break;
 
                 // Counter State
@@ -182,6 +238,75 @@ namespace project_Samurai
                 case playerStates.dash:
                     _spriteBatch.Draw(texture, position, Color.White);
                     break;
+            }
+        }
+
+        private void CheckDirection()
+        {
+            // Movement input
+            if (currentKeyboardState.IsKeyDown(Keys.W))
+            {
+                if (currentKeyboardState.IsKeyDown(Keys.A))
+                {
+                    currentDirection = directions.upLeft;
+                }
+                else if (currentKeyboardState.IsKeyDown(Keys.D))
+                {
+                    currentDirection = directions.upRight;
+                }
+                else
+                {
+                    currentDirection = directions.up;
+                }
+            }
+            else if (currentKeyboardState.IsKeyDown(Keys.S))
+            {
+                if (currentKeyboardState.IsKeyDown(Keys.A))
+                {
+                    currentDirection = directions.downLeft;
+                }
+                else if (currentKeyboardState.IsKeyDown(Keys.D))
+                {
+                    currentDirection = directions.downRight;
+                }
+                else
+                {
+                    currentDirection = directions.down;
+                }
+            }
+            else if (currentKeyboardState.IsKeyDown(Keys.A))
+            {
+                if (currentKeyboardState.IsKeyDown(Keys.W))
+                {
+                    currentDirection = directions.upLeft;
+                }
+                else if (currentKeyboardState.IsKeyDown(Keys.S))
+                {
+                    currentDirection = directions.downLeft;
+                }
+                else
+                {
+                    currentDirection = directions.left;
+                }
+            }
+            else if (currentKeyboardState.IsKeyDown(Keys.D))
+            {
+                if (currentKeyboardState.IsKeyDown(Keys.W))
+                {
+                    currentDirection = directions.upRight;
+                }
+                else if (currentKeyboardState.IsKeyDown(Keys.S))
+                {
+                    currentDirection = directions.downRight;
+                }
+                else
+                {
+                    currentDirection = directions.right;
+                }
+            }
+            else
+            {
+                currentDirection = directions.right;
             }
         }
     }

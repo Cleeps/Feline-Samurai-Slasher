@@ -48,3 +48,28 @@ C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samur
 C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.dll
 C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.pdb
 C:\Users\nerdy\source\repos\Feline-Samurai-Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.genruntimeconfig.cache
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\Content\samurai.xnb
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.exe
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.deps.json
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.runtimeconfig.json
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.runtimeconfig.dev.json
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.dll
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\project_Samurai.pdb
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.csproj.AssemblyReference.cache
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.AssemblyInfoInputs.cache
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.AssemblyInfo.cs
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.csproj.CopyComplete
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.dll
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.pdb
+D:\Visual Studio 2019\Projects\Feline Samurai Slasher\project_Samurai\project_Samurai\obj\Debug\netcoreapp3.1\project_Samurai.genruntimeconfig.cache
