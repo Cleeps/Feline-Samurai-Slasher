@@ -39,6 +39,7 @@ namespace project_Samurai
         private Vector2 movement;
         private KeyboardState currentKeyboardState;
         private KeyboardState previousKeyboardState;
+        private bool gravityActive;
 
         // Constructor
         public Cat(Texture2D text, Vector2 pos, Rectangle box)
@@ -53,6 +54,7 @@ namespace project_Samurai
         {
             currentKeyboardState = Keyboard.GetState();
 
+            // Player State Machine
             switch (playerState)
             {
                 // Idle States
@@ -105,6 +107,7 @@ namespace project_Samurai
 
                     if (dashTimer < 15)
                     {
+                        // Direction State Machine
                         switch (currentDirection)
                         {
                             case directions.up:
@@ -176,10 +179,23 @@ namespace project_Samurai
                     dashTimer++;
 
                     break;
-
             }
 
-            position += movement;
+            // Gravity State Machine
+            if ((playerState == playerStates.idleLeft || playerState == playerStates.idleRight || playerState == playerStates.counter) &&
+                 position.Y < 200)
+            {
+                // The player is affected by gravity
+                gravityActive = true;
+            }
+            else
+            {
+                // The player is unaffected by gravity
+                gravityActive = false;
+            }
+
+            position.X += movement.X;
+            position.Y += movement.Y + (5 * (gravityActive ? 1 : 0));
             boundingBox.X = (int)position.X;
             boundingBox.Y = (int)position.Y;
 
