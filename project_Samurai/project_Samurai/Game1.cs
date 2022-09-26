@@ -9,14 +9,25 @@ namespace project_Samurai
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
+        // Temporary Texture Data
         private Texture2D cat;
+        private Texture2D tileTexture;
+
+        // Player
         private Cat felineSamurai;
+
+        // Level Editor Info
+        private StageLoader stageLoader;
+
+        // Temp Enemies
         private TempEnemy tempEnemy;
         private TempEnemy tempEnemy2;
         private TempEnemy tempEnemy3;
 
         // Change this to the list?
         private List<TempEnemy> enemyList;
+        private List<Tile> tileList;
 
         public Game1()
         {
@@ -27,6 +38,10 @@ namespace project_Samurai
 
         protected override void Initialize()
         {
+            _graphics.PreferredBackBufferWidth = 384;
+            _graphics.PreferredBackBufferHeight = 384;
+            _graphics.ApplyChanges();
+
             base.Initialize();
         }
 
@@ -34,15 +49,20 @@ namespace project_Samurai
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             cat = Content.Load<Texture2D>("samurai");
+            tileTexture = Content.Load<Texture2D>("temporaryTile");
 
             // Temporary creation calls
             felineSamurai = new Cat(cat, new Vector2(150, 200), new Rectangle(150, 200, 32, 64));
-            tempEnemy = new TempEnemy(cat, new Vector2(550, 200), new Rectangle(550, 200, 32, 64));
-            tempEnemy2 = new TempEnemy(cat, new Vector2(680, 200), new Rectangle(680, 200, 32, 64));
-            tempEnemy3 = new TempEnemy(cat, new Vector2(710, 100), new Rectangle(780, 300, 32, 64));
+
+            // Stage Loader
+            stageLoader = new StageLoader(tileTexture);
+            stageLoader.LoadLevel(1);
 
             // Temp enemy list creation
             enemyList = new List<TempEnemy>();
+            tempEnemy = new TempEnemy(cat, new Vector2(550, 200), new Rectangle(550, 200, 32, 64));
+            tempEnemy2 = new TempEnemy(cat, new Vector2(680, 200), new Rectangle(680, 200, 32, 64));
+            tempEnemy3 = new TempEnemy(cat, new Vector2(710, 100), new Rectangle(780, 300, 32, 64));
 
             // Temp enemy list addition
             enemyList.Add(tempEnemy);
@@ -69,10 +89,19 @@ namespace project_Samurai
 
             _spriteBatch.Begin();
 
+            // Drawing Enemies
             for (int i = 0; i < enemyList.Count; i++)
             {
                 enemyList[i].Draw(_spriteBatch);
             }
+
+            /* Drawing Platforms
+            for (int i = 0; i < tileList.Count; i++)
+            {
+                tileList[i].Draw(_spriteBatch);
+            }*/
+
+            stageLoader.Draw(_spriteBatch);
 
             felineSamurai.Draw(_spriteBatch);
 

@@ -5,8 +5,10 @@
   <Config />
   <SourceFiles>
     <File>D:/Visual Studio 2019/Projects/Feline Samurai Slasher/project_Samurai/project_Samurai/Content/samurai.png</File>
+    <File>D:/Visual Studio 2019/Projects/Feline Samurai Slasher/project_Samurai/project_Samurai/Content/temporaryTile.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
