@@ -9,22 +9,17 @@ namespace project_Samurai
 {
     class StageLoader
     {
-        /*
-            // Temporary Tile Creation
-            tileList = new List<Tile>();
-
-            for (int i = 0; i < 6; i++) 
-            {
-                tileList.Add(new Tile(new Rectangle(32 * i, 0, 32, 32), tileTexture));
-            }
-         
-         */
-
         // Fields
         StreamReader reader;
         Tile[,] tileLayout;
         char[,] levelLayout;
         Texture2D tileTextures;
+
+        // Properties
+        public Tile[,] TileLayout
+        {
+            get { return tileLayout; }
+        }
 
         // Constructor
         public StageLoader(Texture2D texts)

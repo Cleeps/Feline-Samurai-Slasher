@@ -40,6 +40,28 @@ namespace project_Samurai
         private KeyboardState currentKeyboardState;
         private KeyboardState previousKeyboardState;
         private bool gravityActive;
+        List<Tile> tilesToCheck;
+
+        // Properties
+        public float XPos
+        {
+            get { return position.X; }
+        }
+
+        public float YPos
+        {
+            get { return position.Y; }
+        }
+
+        public float MovementX
+        {
+            get { return movement.X; }
+        }
+
+        public float MovementY
+        {
+            get { return movement.Y; }
+        }
 
         // Constructor
         public Cat(Texture2D text, Vector2 pos, Rectangle box)
@@ -50,9 +72,27 @@ namespace project_Samurai
         }
 
         // Update method
-        public void Update(List<TempEnemy> enemyList)
+        public void Update(List<TempEnemy> enemyList, Tile[,] tileLayout)
         {
             currentKeyboardState = Keyboard.GetState();
+            
+            /*if ((tilesToCheck = GetNearbyTiles(this, tileLayout)) != null)
+            {
+                foreach (Tile t in tilesToCheck)
+                {
+                    if (CheckDistantCollision(this, t))
+                    {
+                        while (!this.boundingBox.Intersects(t.BoundingBox))
+                        {
+                            this.position.X += MovementX / MovementX;
+                            this.position.Y += MovementY / MovementY;
+                        }
+
+                        movement.X = 0;
+                        movement.Y = 0;
+                    }
+                }
+            }*/
 
             // Player State Machine
             switch (playerState)
@@ -179,6 +219,19 @@ namespace project_Samurai
                     dashTimer++;
 
                     break;
+            }
+
+            // Tile Collision
+            if ((tilesToCheck = GetNearbyTiles(this, tileLayout)) != null)
+            {
+                foreach (Tile t in tileLayout)
+                {
+                    if (t != null && CheckCollision(this, t))
+                    {
+                        movement.X = 0;
+                        movement.Y = 0;
+                    }
+                }
             }
 
             // Gravity State Machine

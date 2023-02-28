@@ -78,7 +78,7 @@ namespace project_Samurai
             tempEnemy.Update();
             tempEnemy2.Update();
             tempEnemy3.Update();
-            felineSamurai.Update(enemyList);
+            felineSamurai.Update(enemyList, stageLoader.TileLayout);
 
             base.Update(gameTime);
         }
@@ -95,14 +95,10 @@ namespace project_Samurai
                 enemyList[i].Draw(_spriteBatch);
             }
 
-            /* Drawing Platforms
-            for (int i = 0; i < tileList.Count; i++)
-            {
-                tileList[i].Draw(_spriteBatch);
-            }*/
-
+            // Drawing Tiles
             stageLoader.Draw(_spriteBatch);
 
+            // Drawing the Player 
             felineSamurai.Draw(_spriteBatch);
 
             _spriteBatch.End();

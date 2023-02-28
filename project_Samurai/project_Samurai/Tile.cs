@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace project_Samurai
 {
-    class Tile
+    class Tile : GameObject
     {
         // Tile Fields
         Rectangle tileData;
